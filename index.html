@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>CineTech Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<aside class="sidebar">
+  <h2>CineTech</h2>
+  <ul>
+    <li onclick="showSection('dashboard')">Dashboard</li>
+    <li onclick="showSection('films')">Films</li>
+    <li onclick="showSection('realisateurs')">Réalisateurs</li>
+  </ul>
+</aside>
+
+<!-- Main -->
+<div class="main">
+  <nav class="navbar">🎬 Smart Backoffice CineTech</nav>
+
+  <!-- Dashboard -->
+  <section id="dashboard" class="section">
+    <h2>Dashboard</h2>
+    <div class="kpi-container">
+      <div class="kpi">🎥 Total Films <span id="kpiFilms">0</span></div>
+      <div class="kpi">🎬 Réalisateurs <span id="kpiRealisateurs">0</span></div>
+    </div>
+    <canvas id="filmsChart"></canvas>
+  </section>
+
+  <!-- Films -->
+  <section id="films" class="section hidden">
+    <h2>Gestion des Films</h2>
+
+    <form id="filmForm">
+      <input type="text" id="titre" placeholder="Titre du film" required>
+      <input type="number" id="annee" placeholder="Année" required>
+      <input type="text" id="genre" placeholder="Genre" required>
+      <button>Ajouter</button>
+    </form>
+
+    <input type="text" id="searchFilm" placeholder="Rechercher...">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Titre</th>
+          <th>Année</th>
+          <th>Genre</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="filmsTable"></tbody>
+    </table>
+  </section>
+
+  <!-- Réalisateurs -->
+  <section id="realisateurs" class="section hidden">
+    <h2>Réalisateurs</h2>
+
+    <form id="realForm">
+      <input type="text" id="nomReal" placeholder="Nom du réalisateur" required>
+      <button>Ajouter</button>
+    </form>
+
+    <ul id="realList"></ul>
+  </section>
+</div>
+
+
+</html>

@@ -1,0 +1,119 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  background: #f4f6f9;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  background: #111827;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background: #374151;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+}
+
+/* NAVBAR */
+.navbar {
+  background: white;
+  padding: 15px 25px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+.section {
+  padding: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* KPI */
+.kpi-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.kpi {
+  background: white;
+  padding: 20px;
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  font-size: 18px;
+}
+
+/* FORMS */
+form {
+  margin-bottom: 20px;
+}
+
+input, button {
+  padding: 8px;
+  margin-right: 5px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #f1f5f9;
+  text-align: left;
+}
