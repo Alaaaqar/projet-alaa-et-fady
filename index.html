@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<!-- Sidebar -->
 <aside class="sidebar">
   <h2>CineTech</h2>
   <ul>
@@ -19,11 +18,9 @@
   </ul>
 </aside>
 
-<!-- Main -->
 <div class="main">
   <nav class="navbar">🎬 Smart Backoffice CineTech</nav>
 
-  <!-- Dashboard -->
   <section id="dashboard" class="section">
     <h2>Dashboard</h2>
     <div class="kpi-container">
@@ -33,19 +30,16 @@
     <canvas id="filmsChart"></canvas>
   </section>
 
-  <!-- Films -->
   <section id="films" class="section hidden">
     <h2>Gestion des Films</h2>
-
     <form id="filmForm">
       <input type="text" id="titre" placeholder="Titre du film" required>
       <input type="number" id="annee" placeholder="Année" required>
       <input type="text" id="genre" placeholder="Genre" required>
-      <button>Ajouter</button>
+      <button type="submit">Ajouter</button>
     </form>
-
+    <br>
     <input type="text" id="searchFilm" placeholder="Rechercher...">
-
     <table>
       <thead>
         <tr>
@@ -59,18 +53,19 @@
     </table>
   </section>
 
-  <!-- Réalisateurs -->
   <section id="realisateurs" class="section hidden">
     <h2>Réalisateurs</h2>
-
     <form id="realForm">
       <input type="text" id="nomReal" placeholder="Nom du réalisateur" required>
-      <button>Ajouter</button>
+      <button type="submit">Ajouter</button>
     </form>
-
     <ul id="realList"></ul>
   </section>
 </div>
 
 
+<script src="script.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
 </html>
