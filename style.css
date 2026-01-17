@@ -1,31 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+/* POLICE ET BASE */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
 
-* { font-family: 'Space Grotesk', sans-serif; transition: all 0.3s ease; }
-
-.nav-btn {
-    @apply p-5 rounded-2xl cursor-pointer flex items-center text-slate-500 font-bold text-sm tracking-tight;
-}
-.nav-btn.active { @apply bg-indigo-600 text-white shadow-[0_0_25px_rgba(79,70,229,0.3)]; }
-
-.input-premium {
-    background: #12141c !important;
-    border: 1px solid #1e222d !important;
-    color: #ffffff !important;
-    padding: 1.25rem !important;
-    border-radius: 1.25rem !important;
-    font-weight: 600 !important;
-    outline: none !important;
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    background-color: #050508; 
+    color: white; 
 }
 
-.movie-card {
-    background: linear-gradient(145deg, #10121a, #0a0c12);
-    border: 1px solid #1e222d;
-    border-radius: 35px;
-    padding: 2rem;
+/* EFFET GLASSMORPHISM */
+.glass { 
+    background: rgba(18, 18, 23, 0.7); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255,255,255,0.05); 
 }
 
-.spa-section { display: none; opacity: 0; }
-.spa-section.active { display: block; animation: reveal 0.6s ease-out forwards; }
-@keyframes reveal { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+/* NAVIGATION */
+.nav-active { 
+    background: #7c66ff; 
+    color: white !important; 
+    box-shadow: 0 0 25px rgba(124, 102, 255, 0.4); 
+}
 
-.kpi-card { @apply p-10 rounded-[45px] border; }
+.nav-link:hover:not(.nav-active) {
+    background: rgba(255,255,255,0.03);
+    color: white;
+}
+
+/* FORMULAIRES */
+.input-focus:focus { 
+    border-color: #7c66ff; 
+    box-shadow: 0 0 0 2px rgba(124, 102, 255, 0.2); 
+}
+
+/* SCROLLBAR */
+.custom-scroll::-webkit-scrollbar { width: 6px; }
+.custom-scroll::-webkit-scrollbar-thumb { 
+    background: #1c1c24; 
+    border-radius: 10px; 
+}
+
+/* CARTES FILMS */
+.card-hover:hover {
+    transform: translateY(-5px);
+    border-color: rgba(124, 102, 255, 0.3);
+}
+
+.movie-card img { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.movie-card:hover img { transform: scale(1.08); }
+
+/* ÉTATS */
+.hidden { display: none !important; }
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
